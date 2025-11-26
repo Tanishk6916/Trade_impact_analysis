@@ -114,7 +114,7 @@ print("\nExport to Import Ratio per Industry:")
 print(trade_ratio.sort_values(by='Export_to_Import_Ratio', ascending=False))
 
 
-# %% Optional: Merge CAGR and Trade Ratio for combined insight
+# %%  Merge CAGR and Trade Ratio for combined insight
 industry_insights = pd.merge(cagr, trade_ratio, on='SourceFile')
 industry_insights['Trade_Status'] = industry_insights['Export_to_Import_Ratio'].apply(
     lambda x: 'Export Surplus' if x > 1 else 'Import Dependent'
@@ -175,3 +175,4 @@ plt.xlabel('Year'); plt.ylabel('Export Value'); plt.grid(alpha=0.3)
 plt.legend(); plt.show()
 
 # %%
+
