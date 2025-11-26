@@ -34,7 +34,8 @@ for file in csv_files:
 combined_df = pd.concat(df_list, ignore_index=True)
 
 combined_df.to_csv(r"D:\tradeimpact\combined_trade_data.csv", index=False)
-print("✅ CSVs combined successfully!")
+print(" CSVs combined successfully!")
 print("Total rows in combined file:", len(combined_df))
 
 # %%
+
